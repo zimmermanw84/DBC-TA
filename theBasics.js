@@ -15,9 +15,7 @@ someVar = "Global Scoped";
 var someOuterFunction = function() {
 
   var someFunction = function() {
-
     var foo = "foo";
-
   }
 
 };
@@ -31,7 +29,7 @@ var foo = "foo"
 var someOuterFunction = function() {
 
   var someFunction = function() {
-    console.log(foo) // => "foo"
+    console.log(foo); // => "foo"
   }
 
 };
@@ -40,8 +38,7 @@ var someOuterFunction = function() {
 // asks "you ever heard of the variable foo?" someFunction replies to itself "Nope, never
 // heard of foo". Then someFunction goes up a level. someFunction asks someOuterFunction
 // "ever heard of foo?" someOuterFunction replies "nope, never heard of foo". Then, finally,
-// someFunction asks global scope "ever heard of foo?" and global replies "yes, foo
-//  = 'foo' "
+// someFunction asks global scope "ever heard of foo?" and global replies "yes, foo = 'foo'"
 
 // A contrived example, sure, however this illustrates how it works when someFunction fires
 // it goes looking for foo. In the first example global scope is looking for foo and cannot
@@ -98,10 +95,10 @@ foo = 1;
 
 var someFunction = function() {
   foo = "bar";
-}
+};
 
 test();
-console.log(foo) // => "bar";
+console.log(foo); // => "bar";
 
 // On a bigger codebase with multiple developers working on the same app. You don't have
 // control over other people's variable name choices. What if you get a bug where you're
