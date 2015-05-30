@@ -9,6 +9,11 @@ Cover various topics to aid DBC boots gain understaning of JavaScipt fundamental
 ###Related
 [Cari's Awesome Coaching Repo](https://github.com/CariWest/Coaching)
 
+###Index
+- [The Basics](https://github.com/zimmermanw84/DBC-TA/blob/master/theBasics.js)
+
+- WIP... More to come!
+
 ###Awesome Relevant Links
 
 - [It's time to write JS in Strict Mode](http://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/)
