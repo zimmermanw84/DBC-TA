@@ -12,7 +12,7 @@ Cover various topics to aid DBC boots gain understaning of JavaScipt fundamental
 ###Index
 - [The Basics](https://github.com/zimmermanw84/DBC-TA/blob/master/theBasics.js)
 
-- [OO MVC Example](https://github.com/c14jcdj/jsrace/blob/master/javascripts/jsracer.js) ~ [Demo](http://ralph-racer.herokuapp.com/)
+- [OO MVC Example](https://github.com/c14jcdj/jsrace/blob/master/javascripts/jsracer.js) ~ [Demo](http://ralph-racer.herokuapp.com/) ~ By no means "The way", but not a terrible reference
 
 - WIP... More to come!
 
