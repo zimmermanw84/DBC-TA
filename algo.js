@@ -199,6 +199,11 @@ console.log(balance('({)}') === false)
 // My second solution... Impliment a stack data structure.
 
 var isBalanced = function(str) {
+
+  if ( typeof str !== "string" )  {
+    throw new TypeError('Must supply an STRING!');
+  }
+
   var strArray = str.split('');
   var stack = [];
   var isValid = true;
@@ -245,5 +250,35 @@ console.log(isBalanced('({)}') === false);
 console.log(isBalanced(string3) === false);
 
 
+// Return biggest difference in an array of positive integers
+var numbers1 = [12, 20, 30, 400, 9, 1000];
+var numbers2 = [12, 33, 67, 8, 10, 1, 25];
 
+// Greedy >.>
+var biggestDifference = function(arr) {
 
+  if ( !(arr instanceof Array) )  {
+    throw new TypeError('Must supply an ARRAY!');
+  }
+
+  var big = 0;
+  var small = 0;
+
+  // Set small to largest number in array
+  for (var i = 0; i < arr.length; i++) {
+    small = small > arr[i] ? small : arr[i];
+  }
+
+  for (var ii = 0; ii < arr.length; ii++) {
+
+    big = arr[ii] > big ? arr[ii] : big;
+    small = arr[ii] < small ? arr[ii] : small;
+
+  }
+
+  return (big - small);
+};
+
+console.log('--------------- Biggest Number Difference ------------------');
+console.log(biggestDifference(numbers1) === 991);
+console.log(biggestDifference(numbers2) === 66);
