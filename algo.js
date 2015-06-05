@@ -7,13 +7,13 @@ var revString = "si eman ym yeH";
 var string = "";
 
 var reverseString = function(str) {
-	var strArray = str.split('');
+  var strArray = str.split('');
 
-	for (var i = strArray.length - 1; i > -1; i--) {
-		string += strArray[i];
-	}
+  for (var i = strArray.length - 1; i > -1; i--) {
+    string += strArray[i];
+  }
 
-	return string;
+  return string;
 };
 
 // Driver test code
@@ -28,13 +28,13 @@ var array1 = [1,2,3,4,5,6];
 var array2 = [10,20,1000,50,30];
 
 var maxNum = function(arr) {
-	var max = 0;
+  var max = 0;
 
-	for (var i = 0; i < arr.length; i++) {
-		max = max > arr[i] ? max : arr[i];
-	}
+  for (var i = 0; i < arr.length; i++) {
+    max = max > arr[i] ? max : arr[i];
+  }
 
-	return max;
+  return max;
 };
 
 console.log('------------Greatest Number-----------');
@@ -47,24 +47,24 @@ console.log('array2', maxNum(array2) === 1000);
 var strings = ["was", "is", "bullshit", "is", "way", "a"];
 
 var freq = function(arr) {
-	var placeHolder = {};
-	var count = 0;
-	var mostUsedNumber;
+  var placeHolder = {};
+  var count = 0;
+  var mostUsedNumber;
 
   for (var i = 0; i < arr.length; i++) {
    placeHolder[arr[i]] = placeHolder[arr[i]] === undefined ? 1 : ++placeHolder[arr[i]];
- }
-
- for (var key in placeHolder) {
-
-   if (placeHolder[key] > count) {
-    count = placeHolder[key];
-    mostUsedNumber = key;
   }
 
-}
+  for (var key in placeHolder) {
 
-return mostUsedNumber;
+    if (placeHolder[key] > count) {
+      count = placeHolder[key];
+      mostUsedNumber = key;
+    }
+
+  }
+
+  return mostUsedNumber;
 };
 
 console.log("String Frequency", freq(strings) === "is" );
@@ -76,8 +76,8 @@ var exp2 = "()[]{}";
 
 // WARINING MEGAMOTH first iteration >.< Brute Force # BROKEN
 var balance = function(str) {
-	var strArray = str.split('');
-	var braceOpen = 0,
+  var strArray = str.split('');
+  var braceOpen = 0,
       bracketOpen = 0,
       parenOpen = 0,
       braceClose = 0,
