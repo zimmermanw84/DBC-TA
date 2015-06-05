@@ -132,8 +132,8 @@ var balance = function(str) {
 
 };
 
-console.log('------------------ Balanced {[()]} Expression ------------------')
-console.log(balance('([)]') === false) // Failed test case
+console.log('------------------ Balanced {[()]} Expression ------------------');
+console.log(balance('([)]') === false); // Failed
 console.log(balance('([])') === true);
 console.log(balance(exp) === false);
 console.log(balance(exp2) === true);
@@ -282,3 +282,5 @@ var biggestDifference = function(arr) {
 console.log('--------------- Biggest Number Difference ------------------');
 console.log(biggestDifference(numbers1) === 991);
 console.log(biggestDifference(numbers2) === 66);
+
+

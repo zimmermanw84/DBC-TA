@@ -14,7 +14,7 @@ Cover various topics to aid DBC boots gain understaning of JavaScipt fundamental
 
 - [OO MVC Example](https://github.com/c14jcdj/jsrace/blob/master/javascripts/jsracer.js) ~ [Demo](http://ralph-racer.herokuapp.com/) ~ By no means "The way", but not a terrible reference
 
-- [JS Algorithm Fun](https://github.com/zimmermanw84/DBC-TA/blob/master/algo.js) ~ Some are broken and terrible. Just having fun.
+- [JS Algorithm Fun](https://github.com/zimmermanw84/DBC-TA/blob/master/algo.js) ~ Some are broken and some smell awesome! Just having fun.
 
 - WIP... More to come!
 
