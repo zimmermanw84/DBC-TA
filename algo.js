@@ -49,7 +49,7 @@ var strings = ["was", "is", "bullshit", "is", "way", "a"];
 var freq = function(arr) {
   var placeHolder = {};
   var count = 0;
-  var mostUsedNumber;
+  var mostUsedWord;
 
   for (var i = 0; i < arr.length; i++) {
    placeHolder[arr[i]] = placeHolder[arr[i]] === undefined ? 1 : ++placeHolder[arr[i]];
@@ -59,12 +59,12 @@ var freq = function(arr) {
 
     if (placeHolder[key] > count) {
       count = placeHolder[key];
-      mostUsedNumber = key;
+      mostUsedWord = key;
     }
 
   }
 
-  return mostUsedNumber;
+  return mostUsedWord;
 };
 
 console.log("String Frequency", freq(strings) === "is" );
