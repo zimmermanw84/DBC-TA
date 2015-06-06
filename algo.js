@@ -283,4 +283,42 @@ console.log('--------------- Biggest Number Difference ------------------');
 console.log(biggestDifference(numbers1) === 991);
 console.log(biggestDifference(numbers2) === 66);
 
+// Just Adding this so I can compare two arrays
+Array.prototype.compare = function(arr) {
+  if (this.length != arr.length) return false;
 
+  for (var i = 0; i < arr.length; i++) {
+    if (this[i].compare) {
+      if (!this[i].compare(arr[i])) return false;
+    }
+
+    if (this[i] !== arr[i]) return false;
+  }
+
+  return true;
+};
+
+
+// Bubble Sort distuctive
+
+var unSorted = [3,6,2,1,9,19];
+var sorted = [1,2,3,6,9,19];
+
+var bubbleSort = function(arr) {
+  var switchNum;
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var ii = 0; ii < arr.length; ii++) {
+      if (arr[ii+1] < arr[ii]) {
+        switchNum = arr[ii];
+        arr[ii] = arr[ii+1];
+        arr[ii+1] = switchNum;
+      }
+    }
+  }
+
+  return arr;
+};
+
+console.log('------------------ Bubble Sort  -----------------');
+console.log(bubbleSort(unSorted).compare(sorted));
