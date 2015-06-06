@@ -4,7 +4,7 @@ This is a repo that will primarily focus on JavaScript.
 
 ###Objective
 
-Cover various topics to aid DBC boots gain understaning of JavaScipt fundamentals.
+Cover various topics to aid DBC boots gain understanding of JavaScipt fundamentals.
 
 ###Related
 [Cari's Awesome Coaching Repo](https://github.com/CariWest/Coaching)

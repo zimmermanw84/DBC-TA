@@ -196,7 +196,7 @@ console.log(balance(string7) === false)
 console.log(balance(string8) === false)
 console.log(balance('({)}') === false)
 
-// My second solution... Impliment a stack data structure.
+// My second solution... Implement a stack data structure.
 
 var isBalanced = function(str) {
 
@@ -299,7 +299,7 @@ Array.prototype.compare = function(arr) {
 };
 
 
-// Bubble Sort distuctive
+// Bubble Sort destructive
 
 var unSorted = [3,6,2,1,9,19];
 var sorted = [1,2,3,6,9,19];
@@ -311,7 +311,9 @@ var bubbleSort = function(arr) {
     for (var ii = 0; ii < arr.length; ii++) {
       if (arr[ii+1] < arr[ii]) {
         switchNum = arr[ii];
+        console.log('switch', switchNum);
         arr[ii] = arr[ii+1];
+        console.log('ii', arr[ii]);
         arr[ii+1] = switchNum;
       }
     }
