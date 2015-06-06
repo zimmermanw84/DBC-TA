@@ -311,9 +311,7 @@ var bubbleSort = function(arr) {
     for (var ii = 0; ii < arr.length; ii++) {
       if (arr[ii+1] < arr[ii]) {
         switchNum = arr[ii];
-        console.log('switch', switchNum);
         arr[ii] = arr[ii+1];
-        console.log('ii', arr[ii]);
         arr[ii+1] = switchNum;
       }
     }
