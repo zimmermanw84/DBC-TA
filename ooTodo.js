@@ -1,5 +1,7 @@
 !function() {
 
+  "use strict";
+
   var TodoList = function() {
     this.tasks = [];
   };
@@ -18,6 +20,8 @@
   // If you want to add a function to such prototype use ( Array.prototype.someNewFunction = function() {...}; )
   TodoList.prototype = {
     addTask: function(description) {
+      if (!description) throw new TypeError("MUST ENTER A DESCRIPTION!");
+
       var id = this.createTaskId();
 
       this.tasks.push( new Task(description, id) );
@@ -29,14 +33,14 @@
 
       // Iterate through and log each task obj
       for (var i = 0; i < this.tasks.length; i++) {
-        // Kinda hacky way to not display tasks that have been deleted
+
         if (this.tasks[i]) {
           console.log("Task: ", this.tasks[i]);
         }
       }
     },
     getTaskById: function(taskId) {
-      // Custom task getter
+      if (!taskId) throw new TypeError("MUST ENTER TASK ID!");
       var foundTask;
 
       for (var i = 0; i < this.tasks.length; i++) {
@@ -44,7 +48,7 @@
         if (foundTask) break;
       }
 
-      if (!foundTask) throw new TypeError("NO TASK FOUND");
+      if (!foundTask) console.log("No Task by that ID.. Sorry :(");
 
       return foundTask;
     },
@@ -66,6 +70,7 @@
 
   // Expose only TodoList constructor to the global name space
   // No need to expose Task because Task will not exist without TodoList
+  // Rule of least exposure :)
   window.TodoList = TodoList;
 
 }();
