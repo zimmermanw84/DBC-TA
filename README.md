@@ -16,6 +16,8 @@ Cover various topics to aid DBC boots gain understanding of JavaScipt fundamenta
 
 - [JS Algorithm Fun](https://github.com/zimmermanw84/DBC-TA/blob/master/algo.js) ~ Some are broken and some smell awesome! Just having fun.
 
+- [OO JS TodoList](https://github.com/zimmermanw84/DBC-TA/blob/master/ooTodo.js) ~ Another TODO list >.< ~ Console Style!
+
 - WIP... More to come!
 
 ###Awesome Relevant Links
