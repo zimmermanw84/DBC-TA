@@ -322,3 +322,57 @@ var bubbleSort = function(arr) {
 
 console.log('------------------ Bubble Sort  -----------------');
 console.log(bubbleSort(unSorted).compare(sorted));
+
+
+console.log('-------------------- ACTUAL INTERVIEW QUESTION ------------------------');
+console.log('Given two sorted arrays populate a new array with values from both arrays with sorted values');
+
+var a = [1,4,5,9];
+var b = [2,4,7,10,11,15];
+var c = [];
+// First solution concat and sort the easy way
+
+var solutionOne = function() {
+  c = a.concat(b);
+  c = c.sort(function(a, b) {
+    return a-b;
+  });
+};
+
+// solutionOne(); // PASS
+// Quick and dirty
+// console.log("C", c);
+
+
+// Compare each value and push lower value onto new array
+
+var solutionTwo = function() {
+  // Find array with longest length
+  var longestLength = a.length > b.length ? a.length : b.length;
+
+  for (var i = 0; i < longestLength; i++) {
+    // Make sure there are values to compare
+    if (a[i] && b[i]) {
+      // Compare values
+      // console.log("C", c);
+      if (a[i] < b[i]) {
+        // if a value is smaller push a value first
+        c.push(a[i]);
+        c.push(b[i]);
+      } else {
+        // if b value is bigger or equal push b value
+        c.push(b[i]);
+        c.push(a[i]);
+      }
+    } else {
+      // both a and b values don't exist no find which one does
+      if (a[i]) c.push(a[i]);
+      if (b[i]) c.push(b[i]);
+    }
+  }
+  return c;
+};
+
+// solutionTwo(); // PASS
+
+// console.log("C", c);
