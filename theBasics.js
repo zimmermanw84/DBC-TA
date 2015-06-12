@@ -97,7 +97,7 @@ var someFunction = function() {
   foo = "bar";
 };
 
-test();
+someFunction();
 console.log(foo); // => "bar";
 
 // On a bigger codebase with multiple developers working on the same app. You don't have
