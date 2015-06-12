@@ -5,8 +5,8 @@ var someVar = "Function Scoped";
 // Don't
 someVar = "Global Scoped";
 
-// It's very importaint to declare your variables using the "var" keyword.
-// It keeps your veriables properly function scoped which brings us to our next topic
+// It's very important to declare your variables using the "var" keyword.
+// It keeps your variables properly function scoped which brings us to our next topic
 
 // Scope
 // The main thing to remember about scope in JS is that it's a function scoped language not
@@ -103,9 +103,9 @@ console.log(foo); // => "bar";
 // On a bigger codebase with multiple developers working on the same app. You don't have
 // control over other people's variable name choices. What if you get a bug where you're
 // overriding someone else's code and it's takes you years to find it? Or one of your
-// functions get hoisted during assest compiling and breaks production?
+// functions get hoisted during asset compiling and breaks production?
 
-// Sure that sounds extream but it's possible. The only thing we actually have in life
+// Sure that sounds extreme but it's possible. The only thing we actually have in life
 // is time. If you can save yourself some before you spend it on fixing a problem
 // that was completely preventable... You'll have more time to spend all that money
 // you're making... ;P
