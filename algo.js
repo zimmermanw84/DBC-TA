@@ -355,15 +355,15 @@ var solutionTwo = function() {
     if (a[i] && b[i]) {
       // Compare values
       // console.log("C", c);
-      if (a[i] < b[i]) {
-        // if a value is smaller push a value first
-        c.push(a[i]);
-        c.push(b[i]);
-      } else {
-        // if b value is bigger or equal push b value
-        c.push(b[i]);
-        c.push(a[i]);
-      }
+        if (a[i] < b[i]) {
+          // if a value is smaller push a value first
+          c.push(a[i]);
+          c.push(b[i]);
+        } else {
+          // if b value is bigger or equal push b value
+          c.push(b[i]);
+          c.push(a[i]);
+        }
     } else {
       // both a and b values don't exist no find which one does
       if (a[i]) c.push(a[i]);
@@ -373,6 +373,44 @@ var solutionTwo = function() {
   return c;
 };
 
-// solutionTwo(); // PASS
-
+// solutionTwo(); // #BROKEN
+// Works for test case but not if values in array are greater in difference, [1,2,3,4,5] - [6,7,8,9,10]
 // console.log("C", c);
+
+
+var solutionThree = function() {
+  // Make a clone of b
+  c = b.slice(0);
+  // Create function to insert values into array
+  var addToArray = function(index, value) {
+    c.splice(index, 0, value);
+  };
+
+
+  var traverseArray = function(value) {
+      for(var j = 0, jj = c.length; j < jj; j++){
+  //  If the value is less than index and less than index +1
+  // OR compared values are the same insert value into array
+      if( c[j] > value && value < c[j+1] || c[j] == value ) {
+        addToArray(j, value);
+        break;
+      }
+    }
+  };
+
+
+  for (var i = 0, ii= a.length; i < ii; i++) {
+    // Store value from array a
+    var value = a[i];
+    // compare the value and c array's first index if value is smaller add it to the array
+    // if not compare it to the last number in c's array if greater add it to the end if not
+    // traverse the array and insert the value in between number value
+    value < c[0] ? addToArray(0, value) : value > c[c.length-1] ? addToArray(c.length) : traverseArray(value);
+  };
+
+  return c;
+};
+
+solutionThree();
+
+console.log("C", c)
