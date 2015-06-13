@@ -354,7 +354,6 @@ var solutionTwo = function() {
     // Make sure there are values to compare
     if (a[i] && b[i]) {
       // Compare values
-      // console.log("C", c);
         if (a[i] < b[i]) {
           // if a value is smaller push a value first
           c.push(a[i]);
@@ -380,6 +379,8 @@ var solutionTwo = function() {
 
 var solutionThree = function() {
   // Make a clone of b
+  // **Cloning an array this way only works for primitives data type. If the array contains objects or arrays
+  // those "cloned" objects/arrays will still point back to the original object
   c = b.slice(0);
   // Create function to insert values into array
   var addToArray = function(index, value) {
@@ -388,7 +389,7 @@ var solutionThree = function() {
 
 
   var traverseArray = function(value) {
-      for(var j = 0, jj = c.length; j < jj; j++){
+      for(var j = 0, jj = c.length; j < jj; j++) {
   //  If the value is less than index and less than index +1
   // OR compared values are the same insert value into array
       if( c[j] > value && value < c[j+1] || c[j] == value ) {
@@ -404,13 +405,13 @@ var solutionThree = function() {
     var value = a[i];
     // compare the value and c array's first index if value is smaller add it to the array
     // if not compare it to the last number in c's array if greater add it to the end if not
-    // traverse the array and insert the value in between number value
+    // traverse the array and insert the value in between greater and lower numbers
     value < c[0] ? addToArray(0, value) : value > c[c.length-1] ? addToArray(c.length) : traverseArray(value);
-  };
+  }
 
   return c;
 };
 
 solutionThree();
 
-console.log("C", c)
+console.log("C", c);
